@@ -1,0 +1,56 @@
+{
+  "version": 8,
+  "configurePresets": [
+    {
+      "name": "learn-release",
+      "displayName": "learn-release",
+      "description": "For MSVC use, uses /MD",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": ""
+      }
+    },
+    {
+      "name": "learn-debug",
+      "displayName": "learn-debug",
+      "description": "For MSVC use, uses /MDd",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDebugDLL",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": ""
+      }
+    },
+    {
+      "hidden": true,
+      "name": "Qt",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "$env{QTDIR}"
+      },
+      "vendor": {
+        "qt-project.org/Qt": {
+          "checksum": "wVa86FgEkvdCTVp1/nxvrkaemJc="
+        }
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "learn-release",
+      "configurePreset": "learn-release",
+      "configuration": "Release"
+    },
+    {
+      "name": "learn-debug",
+      "configurePreset": "learn-debug",
+      "configuration": "Debug"
+    }
+  ],
+  "vendor": {
+    "qt-project.org/Presets": {
+      "checksum": "WlnDV4jVyZwCvAX3Fi9k4ukqqRM="
+    }
+  }
+}
