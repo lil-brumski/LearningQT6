@@ -18,11 +18,13 @@ set(PROJECT_SOURCES
     src/main.cpp
     src/ChapterOne.cpp
     src/ChapterTwo.cpp
+    src/ChapterThree.cpp
 )
 
 set(HEADER_FILES
     include/ChapterOne.hpp
     include/ChapterTwo.hpp
+    include/ChapterThree.hpp
 )
 
 qt_add_executable(${PROJECT_NAME} ${PROJECT_SOURCES} ${HEADER_FILES})
