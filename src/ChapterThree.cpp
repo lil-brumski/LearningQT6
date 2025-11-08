@@ -6,6 +6,10 @@ ChapterThree::ChapterThree(QObject *parent)
 	qInfo() << this << " constructed " << parent;
 }
 
+void ChapterThree::message(QString var) {
+	qInfo() << this << " " << var;
+}
+
 ChapterThree::~ChapterThree()
 {
 	Q_FOREACH(QObject* child, children()) {
