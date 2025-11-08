@@ -9,7 +9,9 @@ class ChapterThree  : public QObject
 
 public:
 	explicit ChapterThree(QObject *parent);
-	ChapterThree() = default;
+	ChapterThree() {
+		qInfo() << this << " default constructed ";
+	}
 	~ChapterThree();
 };
 
